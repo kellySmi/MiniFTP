@@ -1,0 +1,65 @@
+*{
+	margin:0;
+	padding:0;
+}
+
+html{
+	background: #FFF;
+	position: absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+}
+
+body{
+	font: 14px/1.5 Arial, Helvetica, sans-serif;
+	color:#000;
+}
+
+a, a:visited, a:hover{
+	color:#000;
+	text-decoration: none;
+}
+
+#statusSection {
+	min-height: 80px;
+}
+
+#status {
+	font-weight: 800;
+	font-size:16px;
+}
+
+.errorStatus, .errorStatus > span {
+	color: rgb(235,0,0);
+}
+
+.inline-header {
+	display: inline;
+}
+
+#closeButton {
+	float: right;
+	margin-right: 16px;
+}
+
+#browseButton {
+	margin-right: 2px;
+ 	margin-left: -8px !important;
+	vertical-align: super;
+}
+
+#progressbar {
+	width: 40%; 
+	height: 12px;
+}
+
+#locationDiv {
+    max-width: 458px !important; 
+	overflow: hidden; 
+	white-space: nowrap; 
+	text-overflow: ellipsis; 
+	display: inline-block;
+}
+

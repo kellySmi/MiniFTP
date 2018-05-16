@@ -1,0 +1,23 @@
+{
+  "name": "dt-export",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "window": {
+    "toolbar": false,
+    "icon": "lightgrey.png",
+    "title": "Data Transformation Export",
+    "width": 580,
+    "height": 480
+  },
+  "license": "ISC",
+  "dependencies": {
+    "copy-paste": "^1.3.0",
+    "ftpd": "0.2.11",
+    "random-string": "0.1.2"
+  }
+}

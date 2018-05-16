@@ -1,0 +1,2759 @@
+/* @import url("lavender.less"); */
+
+/* @import url("blue.less"); */
+
+/* @import url("sage.less"); */
+
+/* @import url("rust.less"); */
+
+/*@import url("teal.less"); */
+
+/* default settings */
+.checkbox-radio-img {
+  background-position: 0px -84px;
+}
+/* font */
+@font-face {
+  font-family: 'acxiom-Helvetica';
+  src: url('font/helveticaneuece55roman.eot') format('eot'), url('font/helveticaneuece55roman.eot?#iefix') format('embedded-opentype'), url('font/helveticaneuece55roman.woff') format('woff'), url('font/helveticaneuece55roman.ttf') format('truetype'), url('font/helveticaneuece55roman.svg#helveticaneuece55roman') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+.status-font {
+  font-weight: bold;
+}
+/* colors */
+/* utility */
+.no-selection {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+/*
+=============================================================== 
+	GLOBAL NAVIGATION											 
+=============================================================== */
+
+.acxiom-nav-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+  top: 0;
+  margin: 0;
+  padding: 0;
+  z-index: 300 !important;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+.acxiom-nav-inner {
+  width: 100%;
+  background-color: #414141;
+  padding: 0;
+  overflow: hidden;
+}
+.acxiom-nav-inner-left-first {
+  float: left;
+  padding-left: 10px;
+}
+.acxiom-nav-inner-left {
+  float: left;
+  padding-left: 5px;
+}
+.acxiom-nots {
+  background: url(img/acxiom-orange-bg.png) repeat-x #e57d23;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-box-shadow: 0 3px 1px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0 3px 1px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 3px 1px rgba(0, 0, 0, 0.4);
+  color: white;
+  float: right;
+  font-weight: bold;
+  height: 16px;
+  margin-left: 10px;
+  margin-top: 5px;
+  overflow: hidden;
+  padding-left: 5px;
+  padding-right: 5px;
+  position: relative;
+  text-align: center;
+  vertical-align: middle;
+  width: auto;
+  line-height: 16px;
+}
+.acxiom-nots:hover,
+.acxiom-nots.active {
+  background: gray;
+  cursor: pointer;
+}
+.acxiom-img-separator {
+  width: 15px;
+  height: 1px;
+  float: left;
+}
+.acxiom-div-logo-large {
+  padding-top: 10px;
+  padding-left: 15px;
+  overflow: hidden;
+  padding-bottom: 5px;
+}
+.acxiom-nav-inner-right {
+  float: right;
+  padding-right: 10px;
+}
+.acxiom-nav-left {
+  float: left;
+}
+.acxiom-nav-inner-right div {
+  float: left;
+}
+.acxiom-global-menu {
+  width: 100%;
+  height: 75px;
+  background-color: #414141;
+  display: none;
+  border-top: 1px solid #2c2c2c;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+.acxiom-global-menu .acxiom-div-logo-large + div {
+  text-align: center;
+}
+.acxiom-global-menu.demo,
+.acxiom-notifications-tray.demo {
+  position: absolute;
+  z-index: 9;
+}
+.tray-close-button {
+  cursor: pointer;
+}
+.acxiom-div-logo-small {
+  background-color: #4f5354;
+  height: 21px;
+  padding: 6px 5px 0;
+  float: left;
+  cursor: pointer;
+}
+.acxiom-div-logo-small img {
+  height: 12px;
+  width: auto;
+  border: 0;
+}
+.acxiom-div-logo-large a img {
+  height: 40px;
+  width: auto;
+  border: 0;
+  float: left;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-box-shadow: 0 2px 1px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 2px 1px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.3);
+}
+.acxiom-div-logo-large a .active {
+  margin: -3px;
+  border: 3px solid white;
+  position: relative;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  box-shadow: 0;
+}
+.acxiom-img-more {
+  height: 35px;
+  width: 70px;
+  background-color: #6e6e6e;
+  float: left;
+  overflow: hidden;
+  border: 3px solid transparent;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  cursor: pointer;
+}
+.acxiom-img-more-icon {
+  width: 14px;
+  float: left;
+  padding-left: 5px;
+}
+.acxiom-img-more-text {
+  text-align: left;
+  color: gainsboro;
+  font-size: 9px;
+  float: left;
+  position: relative;
+}
+.acxiom-global-welcome {
+  font-size: 10px;
+  color: white;
+}
+.acxiom-nav-left div select option {
+  background-color: #eeeeee;
+  height: 23px;
+  padding-top: 8px;
+  border: 0;
+  color: #555555;
+}
+.acxiom-nav-left div select option:hover {
+  background: #466276 url("img/acxiom-option-bg.png") repeat;
+  color: #555555;
+}
+.acxiom-nav-inner-left img {
+  padding-left: 5px;
+}
+.acxiom-nav-inner-left div ul {
+  margin: 0;
+  padding: 5px 0px 0;
+  height: 20px;
+}
+.acxiom-nav-inner-left div ul:hover {
+  background-color: #4f5354;
+}
+.acxiom-nav-inner-left div ul li {
+  list-style: none;
+  float: left;
+}
+.acxiom-nav-inner-left div ul li a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  max-height: 100px;
+}
+.acxiom-nav-inner-left div ul li a span {
+  color: white;
+  text-decoration: none;
+}
+.acxiom-nav-inner-left div ul li ul {
+  display: none;
+  width: 150px;
+  z-index: 999;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-box-shadow: 0 2px 1px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0 2px 1px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.4);
+  height: 200px;
+  width: auto;
+  overflow: auto;
+}
+.acxiom-nav-inner-left div ul li:hover ul,
+.acxiom-nav-inner-left div ul li.hover ul {
+  display: block;
+  /*width: 150px;*/
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  background: white/*background: pink*/;
+}
+.acxiom-nav-inner-left div ul li:hover li,
+.acxiom-nav-inner-left div ul li.hover li {
+  float: none;
+}
+.acxiom-nav-inner-left div ul li:hover li a,
+.acxiom-nav-inner-left div ul li.hover li a {
+  background-color: white;
+  color: #555555;
+  height: 23px;
+  padding-top: 7px;
+  padding-left: 10px;
+}
+.acxiom-nav-inner-left div ul li li a:hover {
+  background-color: #c7e3ed;
+}
+.acxiom-notifications-tray {
+  width: 100%;
+  height: 75px;
+  background-color: #555555;
+  display: none;
+  border-top: 1px solid #2c2c2c;
+}
+.acxiom-notifications-tray .notification {
+  background-color: white;
+  height: 54px;
+  width: 180px;
+  margin: 10px;
+  float: left;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-box-shadow: 0 3px 1px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0 3px 1px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 3px 1px rgba(0, 0, 0, 0.4);
+  background: #e6e6e6;
+  background: -moz-linear-gradient(top, #e6e6e6 0%, white 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #e6e6e6), color-stop(100%, white));
+  background: -webkit-linear-gradient(top, #e6e6e6 0%, white 100%);
+  background: -o-linear-gradient(top, #e6e6e6 0%, white 100%);
+  background: -ms-linear-gradient(top, #e6e6e6 0%, white 100%);
+  background: linear-gradient(to bottom, #e6e6e6 0%, white 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e6e6e6', endColorstr='#ffffff', GradientType=0);
+  position: relative;
+}
+.acxiom-notifications-tray .notification .right {
+  float: right;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 20px;
+  right: 0;
+}
+.acxiom-notifications-tray .notification .count {
+  float: right;
+  z-index: 999;
+  height: 14px;
+  margin-top: -3px;
+  margin-right: -3px;
+  padding: 0px 5px 2px;
+  background-color: #f17e1a;
+  background: url(img/acxiom-orange-bg.png) repeat-x #e57d23;
+  color: white;
+  font-weight: bold;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  cursor: default;
+  -webkit-box-shadow: 0 3px 1px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0 3px 1px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 3px 1px rgba(0, 0, 0, 0.4);
+}
+.acxiom-notifications-tray .notification .scrollup {
+  margin-top: 8px;
+  margin-left: 5px;
+}
+.acxiom-notifications-tray .notification .scrolldown {
+  margin-left: 5px;
+}
+.acxiom-notifications-tray .notification .content {
+  margin-top: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  color: #333333;
+  max-height: 45px;
+}
+.acxiom-notifications-tray .notification .content .data {
+  float: left;
+}
+.acxiom-notifications-tray .notification .header {
+  font-weight: bold;
+  font-size: 11px;
+}
+.acxiom-notifications-tray .notification .message {
+  font-size: 12px;
+  float: left;
+}
+.acxiom-notifications-tray .notification .message-detail {
+  font-size: 12px;
+  font-weight: bold;
+  float: left;
+  padding-left: 3px;
+}
+/* dropdown menu left */
+
+.acxiom-nav-left div {
+  position: relative;
+  display: inline-block;
+}
+.acxiom-nav-left div:after {
+  content: url(img/acxiom-nav-arrow-disabled.png);
+  position: absolute;
+  top: 1px;
+  right: 0;
+  bottom: 0;
+  font-size: 60%;
+  line-height: 22px;
+  padding-right: 5px;
+  margin: 1px;
+  width: 16px;
+  color: white;
+  pointer-events: none;
+  padding-top: 0px;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+}
+/* dropdown menu right */
+
+.acxiom-nav-inner-right div ul {
+  margin: 0;
+  padding: 5px 10px 0;
+  height: 20px;
+}
+.acxiom-nav-inner-right div ul:hover {
+  background-color: #4f5354;
+}
+.acxiom-nav-inner-right div ul li {
+  list-style: none;
+  float: left;
+}
+.acxiom-nav-inner-right div ul li a {
+  display: block;
+  color: white;
+  text-decoration: none;
+}
+.acxiom-nav-inner-right div ul li ul {
+  display: none;
+  width: 150px;
+  z-index: 999;
+  -webkit-box-shadow: 0 2px 1px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 2px 1px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.3);
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  height: auto;
+}
+.acxiom-nav-inner-right div ul li:hover ul,
+.acxiom-nav-inner-right div ul li.hover ul {
+  display: block;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+}
+.acxiom-nav-inner-right div ul li:hover li,
+.acxiom-nav-inner-right div ul li.hover li {
+  float: none;
+}
+.acxiom-nav-inner-right div ul li:hover li a,
+.acxiom-nav-inner-right div ul li.hover li a {
+  background-color: white;
+  color: #555555;
+  height: 23px;
+  padding-top: 7px;
+  padding-left: 10px;
+}
+.acxiom-nav-inner-right div ul li li a:hover {
+  background-color: #c7e3ed;
+}
+.acxm-company-title {
+  color: white;
+  font-size: 11px;
+  display: none;
+  position: absolute;
+  padding-top: 4px;
+}
+/* Custom */
+
+.acxiom-globalnav-scroll-content {
+  height: auto !important;
+}
+.acxiom-globalnav-sign-in {
+  color: white;
+  line-height: 27px;
+  text-decoration: none;
+  padding-right: 15px;
+}
+.acxiom-globalnav-company-title {
+  color: white;
+  font-size: 11px;
+  display: none;
+  position: absolute;
+  padding-top: 4px;
+  z-index: 301;
+}
+.acxiom-global-menu.demo,
+.acxiom-notifications-tray.demo {
+  position: absolute;
+  z-index: 9;
+}
+.acxiom-global-navigation .acxiom-page-container {
+  top: 6px;
+  background-color: transparent !important;
+}
+.acxiom-page-container .acxiom-subtabs-container {
+  margin-top: 46px;
+}
+/* 
+=============================================================== 
+	SCAFFOLDING & GENERAL 											 
+=============================================================== */
+
+html,
+body {
+  margin: 0 !important;
+  background: #ffffff;
+  text-align: center;
+}
+body {
+  background: transparent;
+}
+body *,
+body *:focus {
+  outline: none !important;
+}
+body {
+  text-align: left;
+}
+body,
+div,
+input,
+textarea,
+span,
+td,
+option,
+a {
+  font-family: acxiom-Helvetica, "Arial" !important;
+  font-size: 13px;
+  color: #666666;
+}
+p {
+  margin: 0 0 15px 0;
+  line-height: 17px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: acxiom-Helvetica, "Arial" !important;
+  color: #666666;
+  margin: 15px 0;
+  padding: 0;
+  line-height: normal;
+}
+h1 {
+  font-size: 21px;
+}
+h2 {
+  font-size: 17px;
+  color: #666666;
+}
+h3 {
+  font-size: 14px;
+  margin: 10px 0;
+}
+h4 {
+  font-size: 14px;
+  font-weight: normal;
+  margin: 10px 0;
+}
+h5 {
+  font-size: 12px;
+}
+h6 {
+  font-size: 10px;
+}
+h3,
+h4,
+h5,
+h6 {
+  color: #444444;
+  text-transform: uppercase; 
+}
+h5,
+h6 {
+  color: #555555;
+  margin: 7px 0;
+}
+h4 + h5 {
+  margin: -6px 0 15px 0;
+}
+img {
+  border: 0;
+}
+/* links */
+
+a.acxiom-link,
+a.acxiom-link:visited {
+  color: #0088cc;
+  text-decoration: none;
+}
+a.acxiom-link:hover {
+  text-decoration: underline;
+}
+/* Boostrap input fixes */
+
+input.acxiom-input[class*="span"],
+.acxiom-select[class*="span"],
+.acxiom-combobox[class*="span"],
+.acxiom-combobox[class*="span"] input,
+textarea.acxiom-input[class*="span"] {
+  margin-left: 0 !important;
+  float: none !important;
+  left: 0 !important;
+  min-height: 28px;
+}
+/* 
+=============================================================== 
+	MAIN CONTAINERS 											 
+=============================================================== */
+
+/* 
+------------------------------------------ 
+	GLOBAL NAV
+--------------------------------------- */
+
+.acxiom-global-navigation {
+  position: relative;
+  height: 33px;
+}
+/* 
+------------------------------------------ 
+	PAGE FRAME
+--------------------------------------- */
+
+.acxiom-background-color-bar {
+  position: absolute;
+  height: 45px !important;
+  top: 27px;
+  width: 100%;
+  background-color: #b85f1b;
+  /* Background color of Top Navigation */
+  z-index: 1 !important;
+}
+.acxiom-page-container {
+  text-align: left;
+  margin: 0 auto;
+  max-width: 1200px;
+  min-width: 970px;
+  position: relative;
+  display: block;
+  z-index: 2;
+  background: transparent url('img/page-frame-bg.png') 0 5px repeat-x;
+  /* white img bg  fix for corner radius clipping */
+  border-top-left-radius: 4px;
+  -webkit-border-top-left-radius: 4px;
+  -moz-border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  -webkit-top-bottom-right-radius: 4px;
+  -moz-border-top-right-radius: 4px;
+  -webkit-box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.6);
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.6);
+}
+body.fluid .acxiom-page-container {
+  margin: 0px 25px;
+  max-width: none;
+}
+/* 
+------------------------------------------ 
+	PAGE CONTENT 
+--------------------------------------- */
+
+/* for page and section titles (can also hold buttons and other components) */
+
+.acxiom-header-container h1,
+.acxiom-header-container h2,
+.acxiom-header-container h3,
+.acxiom-header-container h4,
+.acxiom-header-container h5,
+.acxiom-header-container h6 {
+  margin: 0;
+}
+.acxiom-header-container h4 + h5 {
+  margin-top: 3px;
+}
+/* main content area */
+
+#acxiom-body-container {
+  overflow: auto;
+}
+/* only use once - used for page height JS (see acxiom.ui.base.css) */
+
+/* to create section blocks inside the content area */
+
+/* *** used to apply utility classes *** */
+
+/* for action buttons, filtering, pagination, etc */
+
+.acxiom-action-container {
+  overflow: hidden !important;
+  vertical-align: middle;
+  line-height: 34px;
+}
+/* action-container child overrides */
+
+.acxiom-action-container label {
+  display: inline-block;
+  padding: 0;
+}
+.acxiom-action-container input.acxiom-input {
+  margin: 0;
+}
+.acxiom-action-container label {
+  margin: 0 4px 0 0;
+}
+.acxiom-action-container input.acxiom-input {
+  height: 18px;
+  padding: 2px 6px;
+  margin-top: -1px;
+  display: inline-block !important;
+}
+.acxiom-action-container input.acxiom-input[class*="span"] {
+  min-height: 24px !important;
+}
+.acxiom-action-container input.acxiom-button.primary,
+.acxiom-action-container input.acxiom-button.secondary {
+  font-size: 11px;
+  height: 22px;
+  padding: 0 10px;
+  line-height: 22px;
+  min-width: 72px;
+  background-position: 0 -1px;
+}
+.acxiom-action-container input.acxiom-button.primary:not([disabled]):hover,
+.acxiom-action-container input.acxiom-button.secondary:not([disabled]):hover {
+  background-position: 0 -33px;
+}
+.acxiom-action-container .acxiom-select,
+.acxiom-action-container .acxiom-combobox {
+  display: inline-block;
+}
+.acxiom-action-container .acxiom-select select {
+  height: 24px;
+  line-height: 11px;
+  float: none;
+}
+.acxiom-action-container .acxiom-combobox input {
+  min-height: 24px !important;
+}
+.acxiom-action-container .acxiom-combobox:after {
+  content: url('img/acxiom-combo-arrow-sm.png');
+}
+.acxiom-action-container .acxiom-select:after {
+  content: url('img/dropdown/arrow-chart-ch-sm.png');
+  top: 5px;
+}
+.acxiom-action-container .acxiom-select.disabled:after {
+  content: url('img/dropdown/acxiom-arrow-disabled-sm.png');
+  top: 5px;
+}
+.acxiom-action-container .acxiom-pagination input {
+  margin-right: 4px !important;
+}
+.acxiom-action-container h1,
+.acxiom-action-container h2,
+.acxiom-action-container h3,
+.acxiom-action-container h4,
+.acxiom-action-container h5,
+.acxiom-action-container h6 {
+  margin: 0 5px 0 0;
+  display: inline;
+  line-height: inherit !important;
+}
+/* dark version */
+
+.acxiom-action-container.dark {
+  background-color: #466276;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  padding: 0 10px;
+  -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
+}
+/* action-container dark child overrides */
+
+.acxiom-action-container.dark label {
+  color: white;
+}
+.acxiom-action-container.dark .acxiom-pagination .totalpages {
+  color: white;
+}
+.acxiom-action-container.dark .acxiom-pagination a.first {
+  background: url('../styles/img/pagination/W_EL1.png') center center no-repeat;
+}
+.acxiom-action-container.dark .acxiom-pagination a.previous {
+  background: url('../styles/img/pagination/W_EL2.png') center center no-repeat;
+}
+.acxiom-action-container.dark .acxiom-pagination a.next {
+  background: url('../styles/img/pagination/W_ER3.png') center center no-repeat;
+}
+.acxiom-action-container.dark .acxiom-pagination a.last {
+  background: url('../styles/img/pagination/W_ER4.png') center center no-repeat;
+}
+/* 
+=============================================================== 
+	UTILITY CLASSES 											 
+=============================================================== */
+
+/* Apply these on the Page Content Containers Above  */
+
+/* *** DO NOT APPLY ON ROW-FLUID *** */
+
+.pull-right {
+  float: right !important;
+}
+/* aligns element to the right */
+
+.span-right {
+  text-align: right !important;
+}
+/* aligns element's content to the right */
+
+.span-left {
+  text-align: left !important;
+}
+/* aligns element's content to the left */
+
+.span-center {
+  text-align: center !important;
+}
+/* aligns element's content to the center */
+
+.inline {
+  display: inline-block !important;
+}
+/* displays elements in-line (for horizontal layouts) */
+
+.hide {
+  display: none;
+}
+/* hides elements */
+
+.buffer {
+  margin: 15px !important;
+}
+/* adds margin to elements  */
+
+.top-buffer {
+  margin-top: 15px !important;
+}
+/* adds top margin to elements  */
+
+.bottom-buffer {
+  margin-bottom: 15px !important;
+}
+/* adds bottom margin to elements  */
+
+.left-buffer {
+  margin-left: 15px !important;
+}
+/* adds top margin to elements  */
+
+.right-buffer {
+  margin-right: 15px !important;
+}
+/* adds top margin to elements  */
+
+.label-buffer {
+  margin-top: 29px !important;
+}
+/* adds top margin to match <label> outerHeight  */
+
+.hpad {
+  padding-right: 15px !important;
+  padding-left: 15px !important;
+}
+/* adds horizontal padding to elements */
+
+.hpad-left {
+  padding-left: 15px !important;
+}
+/* adds left padding to elements */
+
+.hpad-right {
+  padding-right: 15px !important;
+}
+/* adds right padding to elements */
+
+.vpad {
+  padding-top: 15px !important;
+  padding-bottom: 15px !important;
+}
+/* adds vertical padding to elements */
+
+.vpad-top {
+  padding-top: 15px !important;
+}
+/* adds top padding to elements */
+
+.vpad-bottom {
+  padding-bottom: 15px !important;
+}
+/* adds bottom padding to elements */
+
+.close-top {
+  border-top: 1px solid #dbdbdb !important !important;
+}
+/* adds top border to elements */
+
+.close-left {
+  border-left: 1px solid #dbdbdb !important !important;
+}
+/* adds left border to elements */
+
+.close-right {
+  border-right: 1px solid #dbdbdb !important !important;
+}
+/* adds right border to elements */
+
+.close-bottom {
+  border-bottom: 1px solid #dbdbdb !important !important;
+}
+/* adds bottom border to elements */
+
+.closed {
+  border: 1px solid #dbdbdb !important !important;
+  background-color: white;
+}
+/* adds full border to elements */
+
+.filled {
+  background-color: #faf8f9 !important;
+}
+/* adds a light background color to elements */
+
+.rounded {
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+}
+/* adds rounded corners to elements */
+
+.shadow {
+  -webkit-box-shadow: 0 0 2px rgba(125, 125, 125, 0.2);
+  -moz-box-shadow: 0 0 2px rgba(125, 125, 125, 0.2);
+  box-shadow: 0 0 2px rgba(125, 125, 125, 0.2);
+}
+/* adds a light bottom shadow to elements */
+
+/* 
+=============================================================== 
+	FORM & INPUTS 											 
+=============================================================== */
+
+label {
+  color: #666666;
+  font-size: 13px;
+  display: block;
+  width: auto;
+  padding: 7px 0;
+  margin: 0;
+  float: none;
+}
+/* for mandatory fields (applied to SPAN inside LABEL) */
+
+.mandatory {
+  margin-left: 1px;
+  position: relative;
+  top: -1px;
+  font-size: 15px !important;
+  line-height: 11px;
+  color: #ba2c26;
+}
+/* 
+------------------------------------------ 
+	TEXTFIELD (INPUT TEXT)
+--------------------------------------- */
+
+/* ------- LessMixins -------  */
+
+.acxiom-input-common {
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-box-shadow: 0 1px 0 rgba(155, 155, 155, 0.3) inset;
+  -moz-box-shadow: 0 1px 0 rgba(155, 155, 155, 0.3) inset;
+  box-shadow: 0 1px 0 rgba(155, 155, 155, 0.3) inset;
+  color: #333333;
+  border: 1px solid #bebebe;
+  background-color: white;
+  font-size: 12px;
+}
+/* ----- End LessMixins -----  */
+
+/* textfield */
+
+.acxiom-input {
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-box-shadow: 0 1px 0 rgba(155, 155, 155, 0.3) inset;
+  -moz-box-shadow: 0 1px 0 rgba(155, 155, 155, 0.3) inset;
+  box-shadow: 0 1px 0 rgba(155, 155, 155, 0.3) inset;
+  color: #333333;
+  border: 1px solid #bebebe;
+  background-color: white;
+  font-size: 12px;
+  height: 18px;
+  padding: 4px 6px;
+  vertical-align: middle;
+}
+/* textarea */
+
+textarea.acxiom-input {
+  height: auto;
+  padding: 5px;
+  resize: both !important;
+  max-width: 100% !important;
+  min-height: 80px !important;
+}
+/* placeholder */
+
+input:-moz-placeholder,
+input:-webkit-placeholder,
+input:-ms-placeholder {
+  color: #999999;
+}
+/* focus */
+
+.acxiom-input:focus {
+  background-color: #c7e3ed;
+}
+/* disabled */
+
+input[type="text"].acxiom-input:disabled,
+textarea.acxiom-input:disabled {
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  background: #f6f6f7;
+  border: 1px solid #ededed;
+  color: #b6b6b6 !important;
+}
+/* search */
+
+.acxiom-input.search {
+  padding-left: 22px !important;
+  background: white url(img/acxiom-input-search.png) 4px center no-repeat;
+}
+/* hint + error messages */
+
+.acxiom-hint,
+.acxiom-error {
+  font-size: 12px;
+  display: none;
+  color: #aaaaaa;
+  position: relative;
+  padding: 5px 0;
+  width: 100%;
+  text-align: left;
+  z-index: 30;
+  clear: both;
+}
+/* show hint box on input focus */
+
+*:focus ~ .acxiom-hint {
+  display: block;
+}
+/* tooltip box */
+
+.acxiom-tooltip {
+  display: none;
+  font-size: 12px;
+  background: white;
+  min-width: 67px;
+  max-width: 280px;
+  -webkit-box-shadow: 0 0 1px 0 rgba(155, 155, 155, 0.4);
+  -moz-box-shadow: 0 0 1px 0 rgba(155, 155, 155, 0.4);
+  box-shadow: 0 0 1px 0 rgba(155, 155, 155, 0.4);
+  border: 1px solid #dbdbdb !important;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  padding: 10px;
+  margin: 0;
+  position: absolute;
+  z-index: 30;
+  margin-left: -10px;
+  /* margin-top is calculated with JS - see acxiom.ui.base.js */
+
+}
+/* tooltip arrow */
+
+div.acxiom-tooltip:after {
+  content: url("img/acxiom-tooltip-arrow.png");
+  position: absolute;
+  bottom: -11px;
+  height: 11px;
+  left: 20px;
+  z-index: 31;
+}
+/* show tooltip */
+
+*:hover + .acxiom-tooltip,
+*:focus + .acxiom-tooltip {
+  display: block;
+}
+/* validation */
+
+.acxiom-input.invalid {
+  background-color: #f6d6d4 !important;
+}
+.acxiom-error {
+  display: block;
+  color: #ba2c26;
+}
+/* validation using Live Validation plugin */
+
+.LV_validation_message {
+  font-size: 12px;
+  display: block;
+  color: #ba2c26;
+  position: relative;
+  padding: 5px 0;
+  width: 100%;
+  text-align: left;
+  clear: both;
+}
+.dark .LV_invalid {
+  color: #f6d6d4;
+}
+.LV_invalid {
+  color: #ba2c26;
+  line-height: 18px;
+}
+.LV_invalid_field,
+input.LV_invalid_field,
+input.LV_invalid_field:hover,
+input.LV_invalid_field:active,
+textarea.LV_invalid_field:hover,
+textarea.LV_invalid_field:active {
+  background-color: #f6d6d4 !important;
+}
+/* 
+------------------------------------------ 
+	DROPDOWN (SELECT)
+--------------------------------------- */
+
+/* required parent container */
+
+.acxiom-select {
+  position: relative;
+  display: inline-block;
+}
+.acxiom-select select {
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  display: inline-block;
+  border: 1px solid #cccccc;
+  padding: 4px 12px 3px 4px;
+  margin: 0;
+  font: inherit;
+  outline: none;
+  line-height: 20px;
+  background: url(img/dropdown/select-bg.png);
+  -webkit-appearance: none;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  cursor: pointer;
+  height: 28px;
+  color: #333333;
+  font-size: 12px;
+}
+@media screen and (min-device-pixel-ratio: 0) {
+  .acxiom-select select {
+    padding-right: 30px;
+  }
+}
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  .acxiom-select select {
+    padding-right: 26px;
+  }
+}
+.acxiom-select:after {
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  content: url('img/dropdown/arrow-chart-ch.png');
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  padding-right: 12px;
+  margin: 1px;
+  width: 18px;
+  pointer-events: none;
+  padding-top: 0;
+}
+select option {
+  padding: 4px !important;
+  border: 0;
+  color: #333333;
+  font-size: 12px;
+  background-color: #eeeeee;
+}
+.acxiom-select option:hover,
+select option:hover {
+  background: #3399ff !important;
+}
+.acxiom-select.disabled select {
+  background: #eeeeee;
+  border: 1px solid lightgray;
+  color: #b6b6b6;
+  cursor: default;
+}
+.acxiom-select.disabled:after {
+  content: url(img/dropdown/acxiom-arrow-disabled.png);
+}
+/* multiple */
+
+.acxiom-select {
+  display: inline-block;
+}
+select[multiple] {
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-box-shadow: 0 1px 0 rgba(155, 155, 155, 0.3) inset;
+  -moz-box-shadow: 0 1px 0 rgba(155, 155, 155, 0.3) inset;
+  box-shadow: 0 1px 0 rgba(155, 155, 155, 0.3) inset;
+  color: #333333;
+  border: 1px solid #bebebe;
+  background-color: white;
+  font-size: 12px;
+  width: 100%;
+  padding: 2px 0 0 0;
+  margin-bottom: 0;
+}
+/* options */
+
+.acxiom-multiple option,
+select[multiple] option {
+  background-color: white;
+  border: 0 !important;
+}
+.acxiom-multiple option:hover,
+select[multiple] option:hover {
+  background: #3399ff !important;
+}
+/* disabled */
+
+select[multiple]:disabled {
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  background: #f6f6f7;
+  border: 1px solid #ededed;
+  color: #b6b6b6 !important;
+}
+select[multiple]:disabled option,
+select[multiple]:disabled option:hover {
+  background: #f6f6f7 !important;
+  color: #b6b6b6 !important;
+}
+/* 
+------------------------------------------ 
+	RADIOS
+--------------------------------------- */
+
+/* required parent container */
+
+.acxiom-radio-group {
+  margin: 0;
+  padding: 0;
+}
+input[type="radio"] {
+  -moz-opacity: 0;
+  -webkit-opacity: 0;
+  opacity: 0;
+  display: none;
+  cursor: pointer;
+}
+input[type="radio"] + span::before {
+  padding-right: 2px;
+  content: "";
+  display: inline-block;
+  width: 17px;
+  height: 14px;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  position: relative;
+  top: -1px;
+  position: static\9;
+  /* fallback for IE6, IE7 and IE8 */
+  cursor: pointer;
+}
+.acxiom-radio-group label {
+  display: block;
+  padding: 7px 10px 0 0;
+}
+.acxiom-radio-group label input[type="radio"] {
+  display: none;
+}
+.acxiom-radio-group label span {
+  font-size: 13px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+input[type="radio"]:not(:disabled) + span {
+  cursor: pointer;
+}
+input[type="radio"] + span::before {
+  background-position: 0px 0px;
+}
+input[type="radio"]:not(:checked):not(:disabled) + span:hover::before {
+  background-position: 0px -14px;
+}
+input[type="radio"]:checked + span::before {
+  background-position: 0px -84px;
+}
+input[type="radio"]:checked + span,
+input[type="radio"]:not(:checked):not(:disabled) {
+  font-weight: bold;
+}
+input[type="radio"]:disabled + span,
+input[type="radio"]:disabled + span::before {
+  -moz-opacity: 0.5;
+  -khtml-opacity: 0.5;
+  opacity: 0.5;
+  cursor: default !important;
+}
+input[type="radio"]:disabled + span::before {
+  opacity: 0.7;
+}
+input[type="radio"] + span::before {
+  background-image: url("img/acxiom-radio.png");
+}
+label + .acxiom-radio-group {
+  margin-top: 2px;
+}
+/* 
+------------------------------------------ 
+	RADIOS
+--------------------------------------- */
+
+/* Radio Add-on */
+
+.acxiom-radio-group.switch {
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border: 1px solid #bababa;
+  display: inline-block;
+  font-size: 0;
+  position: relative;
+}
+.acxiom-radio-group.switch label {
+  padding: 0 !important;
+  margin: 0 !important;
+  right: inherit;
+  border-left: 1px solid #bababa;
+}
+.acxiom-radio-group.switch label:first-child {
+  border-left: none;
+}
+.acxiom-radio-group.switch input[type="radio"] + span:before {
+  display: none;
+}
+.acxiom-radio-group.switch input[type="radio"] {
+  display: block;
+  position: absolute;
+  margin: 0;
+  width: 100%;
+  left: 0;
+  top: 0;
+  height: 26px;
+  z-index: 1;
+  cursor: pointer;
+}
+.acxiom-radio-group.switch input[type="radio"]:disabled {
+  cursor: default !important;
+}
+.acxiom-radio-group.switch input[type="radio"] + span {
+  line-height: 26px;
+  min-width: 40px;
+  display: inline-block;
+  text-align: center;
+  background: #f2f2f2;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #f2f2f2 0%, #e2e2e2 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f2f2f2), color-stop(100%, #e2e2e2));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #f2f2f2 0%, #e2e2e2 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #f2f2f2 0%, #e2e2e2 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #f2f2f2 0%, #e2e2e2 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #f2f2f2 0%, #e2e2e2 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f2f2f2', endColorstr='#e2e2e2', GradientType=0);
+  /* IE6-9 */
+  text-indent: -9999px;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+}
+.acxiom-radio-group.switch input[type="radio"]:checked {
+  z-index: -1;
+}
+.acxiom-radio-group.switch input[type="radio"]:checked + span {
+  font-weight: normal;
+  background: none;
+  filter: none;
+  text-indent: 0;
+}
+/* 
+------------------------------------------ 
+	CHECKBOXES
+--------------------------------------- */
+
+/* required parent container */
+
+.acxiom-checkbox-group {
+  margin: 0;
+  padding: 0;
+}
+input[type="checkbox"] {
+  -moz-opacity: 0;
+  -webkit-opacity: 0;
+  opacity: 0;
+  display: none;
+  cursor: pointer;
+}
+input[type="checkbox"] + span::before {
+  padding-right: 2px;
+  content: "";
+  display: inline-block;
+  width: 17px;
+  height: 14px;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  position: relative;
+  top: -1px;
+  position: static\9;
+  /* fallback for IE6, IE7 and IE8 */
+  cursor: pointer;
+}
+.acxiom-checkbox-group label {
+  width: auto !important;
+  padding: 0;
+  display: block;
+  position: relative;
+  padding: 7px 10px 0 0;
+  background-color: transparent;
+}
+.acxiom-checkbox-group label span {
+  font-size: 13px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+input[type="checkbox"]:not(:disabled) + span {
+  cursor: pointer;
+}
+input[type="checkbox"] + span::before {
+  background-position: 0px 0px;
+}
+input[type="checkbox"]:not(:checked):not(:disabled) + span:hover::before {
+  background-position: 0px -14px;
+}
+input[type="checkbox"]:checked + span::before {
+  background-position: 0px -84px;
+}
+input[type="checkbox"]:checked + span,
+input[type="checkbox"]:not(:checked):not(:disabled) {
+  font-weight: bold;
+}
+input[type="checkbox"]:disabled + span,
+input[type="checkbox"]:disabled + span::before {
+  -moz-opacity: 0.5;
+  -khtml-opacity: 0.5;
+  opacity: 0.5;
+  cursor: default !important;
+}
+input[type="checkbox"]:disabled + span::before {
+  opacity: 0.7;
+}
+input[type="checkbox"] + span::before {
+  background-image: url("img/acxiom-checkbox.png");
+}
+/* Single checkbox with no position and style. This is good to use within tables */
+
+label.acxiom-single-checkbox {
+  padding: 0 !important;
+  position: relative;
+  cursor: pointer;
+  background-color: transparent;
+}
+label.acxiom-single-checkbox span {
+  font-size: 13px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+label.acxiom-single-checkbox input[type="checkbox"] {
+  position: absolute;
+  visibility: hidden;
+}
+label.acxiom-single-checkbox input[type="checkbox"] + span::before {
+  padding-left: 0px;
+  position: relative;
+  top: -1px;
+}
+/*
+=============================================================== 
+	BUTTONS											 
+=============================================================== */
+
+/* 
+------------------------------------------ 
+	MAIN BUTTONS
+--------------------------------------- */
+
+/* Main Button Base */
+
+.acxiom-button {
+  font-size: 13px;
+  color: white;
+  text-transform: uppercase;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  /* same as height for middle vertical-alignement (in IE) */
+  min-width: 100px;
+  width: auto;
+  cursor: pointer;
+  padding: 0 20px;
+  margin-right: 2px;
+  margin-left: 0 !important;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  text-shadow: 0 -1px #626b70;
+  -webkit-box-shadow: 1px 1px 0 rgba(85, 85, 85, 0.7);
+  -moz-box-shadow: 1px 1px 0 rgba(85, 85, 85, 0.7);
+  box-shadow: 1px 1px 0 rgba(85, 85, 85, 0.7);
+}
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  .acxiom-button {
+    margin-right: 0;
+  }
+}
+.acxiom-button:last-child {
+  margin-right: 0;
+}
+/* remove right margin on last button */
+
+.acxiom-button:not([class="clear"]) + .acxiom-button.clear {
+  margin-left: 10px !important;
+}
+/* add margin when clear button is next to normal button */
+
+/* Primary */
+
+.acxiom-button.primary {
+  background: #0096d3 url(img/button/button-primary.png) 0 0 repeat-x;
+  border: 1px solid #0096d3;
+}
+/* Binary */
+
+.acxiom-button.secondary {
+  background: #79868e url(img/button/button-secondary.png) 0 0 repeat-x;
+  border: 1px solid #79868e;
+}
+/* Tertiary */
+
+.acxiom-button.tertiary {
+  color: gray;
+  background: #eeeeee url(img/button/button-tertiary.png) 0 0 repeat-x;
+  border: 1px solid #dddddd;
+  text-shadow: 0 -1px #dddddd;
+  /* lighter text-shadow for this button type */
+
+  -webkit-box-shadow: 1px 1px 0 rgba(125, 125, 125, 0.5);
+  -moz-box-shadow: 1px 1px 0 rgba(125, 125, 125, 0.5);
+  box-shadow: 1px 1px 0 rgba(125, 125, 125, 0.5);
+  /* lighter box-shadow for this button type */
+
+}
+/* 
+------------------------------------------ 
+	ACTION BUTTONS
+--------------------------------------- */
+
+/* Action Button Base */
+
+.acxiom-button.action {
+  /* inherits some properties from main button (.acxiom-button) */
+  font-size: 11px;
+  color: #5a676f;
+  height: 22px;
+  line-height: 22px;
+  /* same as height for vertical-alignement (in IE) */
+  min-width: 72px;
+  margin-right: 0;
+  padding: 0 10px;
+  background: #f1f2f3 url(img/button/button-action.png) 0 0 repeat-x;
+  border: 1px solid #eeeeee;
+  text-shadow: 0 -1px #dddddd;
+  /* lighter text-shadow for this type */
+
+  -webkit-box-shadow: 1px 1px 0 rgba(125, 125, 125, 0.5);
+  -moz-box-shadow: 1px 1px 0 rgba(125, 125, 125, 0.5);
+  box-shadow: 1px 1px 0 rgba(125, 125, 125, 0.5);
+  /* lighter box-shadow for this button type */
+
+}
+/* 
+------------------------------------------ 
+	ICON BUTTONS
+--------------------------------------- */
+
+/* Icon Button Base */
+
+.acxiom-button.action.icon {
+  /* inherits properties from action button (.acxiom-button.action) */
+  padding: 0 14px 0 26px;
+  background-color: #f1f2f3;
+}
+/* Export Icon */
+
+.acxiom-button.action.icon.export {
+  background: url(img/button/acxiom-button-export.png), url(img/button/button-action.png);
+  background-repeat: no-repeat, repeat-x;
+  background-position: 10px 0, 0 0;
+}
+/* Upload Icon */
+
+.acxiom-button.action.icon.upload {
+  background: url(img/button/acxiom-button-upload.png), url(img/button/button-action.png);
+  background-repeat: no-repeat, repeat-x;
+  background-position: 10px 0, 0 0;
+}
+/* 
+------------------------------------------ 
+	ARROW BUTTONS
+--------------------------------------- */
+
+/* Single Arrow Button */
+
+.acxiom-button.action.arrow.sleft {
+  /* inherits properties from action button (.acxiom-button.action) */
+  min-width: 35px;
+  background-image: url(img/button/btn-s-arrow-left.png), url(img/button/button-action.png);
+  background-repeat: no-repeat, repeat-x;
+  background-position: center center, 0 0;
+}
+.acxiom-button.action.arrow.sright {
+  /* inherits properties from action button (.acxiom-button.action) */
+  min-width: 35px;
+  background-image: url(img/button/btn-s-arrow-right.png), url(img/button/button-action.png);
+  background-repeat: no-repeat, repeat-x;
+  background-position: center center, 0 0;
+}
+/* Double Arrow Button */
+
+.acxiom-button.action.arrow.dleft {
+  /* inherits properties from action button (.acxiom-button.action) */
+  min-width: 35px;
+  background-image: url(img/button/btn-d-arrow-left.png), url(img/button/button-action.png);
+  background-repeat: no-repeat, repeat-x;
+  background-position: center center, 0 0;
+}
+.acxiom-button.action.arrow.dright {
+  /* inherits properties from action button (.acxiom-button.action) */
+  min-width: 35px;
+  background-image: url(img/button/btn-d-arrow-right.png), url(img/button/button-action.png);
+  background-repeat: no-repeat, repeat-x;
+  background-position: center center, 0 0;
+}
+/* 
+------------------------------------------ 
+	CLEAR BUTTONS
+--------------------------------------- */
+
+/* Opaque Button Base */
+
+.acxiom-button.clear,
+.acxiom-button.clear[disabled] {
+  /* inherits some properties from main button (.acxiom-button) */
+  color: #888888;
+  font-size: 13px;
+  min-width: inherit;
+  padding: 0 2px;
+  height: 24px;
+  border-width: 0;
+  background: transparent;
+  border-radius: 0px;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  text-shadow: none;
+  box-shadow: none;
+  border-bottom: 1px solid transparent;
+}
+.acxiom-button.clear.small {
+  font-size: 11px;
+}
+/* 
+------------------------------------------ 
+	BUTTONS DISABLED STATES
+--------------------------------------- */
+
+/* default */
+
+.acxiom-button:disabled {
+  color: #cccccc;
+  background: #f6f6f7;
+  border: 1px solid #ededee;
+  cursor: default;
+  text-shadow: none;
+  box-shadow: none;
+}
+/* icons */
+
+.acxiom-button.action.icon.export:disabled {
+  background: #f6f6f7 url(img/button/acxiom-export-disabled.png) 10px 3px no-repeat;
+  border-top-color: #eeeeee;
+}
+.acxiom-button.action.icon.upload:disabled {
+  background: #f6f6f7 url(img/button/acxiom-upload-disabled.png) 10px 3px no-repeat;
+  border-top-color: #eeeeee;
+}
+/* arrow disabled */
+
+.acxiom-button.action.arrow.sleft:disabled {
+  background: #f6f6f7 url(img/button/btn-s-arrow-light-left.png) center center no-repeat;
+  border-top-color: #eeeeee;
+}
+.acxiom-button.action.arrow.sright:disabled {
+  background: #f6f6f7 url(img/button/btn-s-arrow-light-right.png) center center no-repeat;
+  border-top-color: #eeeeee;
+}
+.acxiom-button.action.arrow.dleft:disabled {
+  background: #f6f6f7 url(img/button/btn-d-arrow-light-left.png) center center no-repeat;
+  border-top-color: #eeeeee;
+}
+.acxiom-button.action.arrow.dright:disabled {
+  background: #f6f6f7 url(img/button/btn-d-arrow-light-right.png) center center no-repeat;
+  border-top-color: #eeeeee;
+}
+/* clear */
+
+.acxiom-button.clear:disabled {
+  color: #cccccc;
+}
+/* inside .acxiom-button-container .dark */
+
+.dark .acxiom-button:disabled {
+  color: #466276 !important;
+  background-color: #919fab !important;
+  border-color: #919fab !important;
+}
+.dark .acxiom-button.action:disabled {
+  color: #466276 !important;
+  background-color: #919fab !important;
+  border-color: #919fab !important;
+}
+.dark .acxiom-button.action.icon.export:disabled {
+  background: #919fab url(img/button/acxiom-export-disabled-dark.png) 10px 2px no-repeat !important;
+}
+.dark .acxiom-button.action.icon.upload:disabled {
+  background: #919fab url(img/button/acxiom-upload-disabled-dark.png) 10px 2px no-repeat !important;
+}
+/*  
+------------------------------------------ 
+	BUTTONS HOVER STATES
+--------------------------------------- */
+
+/* default */
+
+.acxiom-button:not([disabled]):hover {
+  background-position: 0 -30px;
+}
+/* action */
+
+.acxiom-button.action:not([disabled]):hover {
+  background-position: 0 -32px;
+}
+/* icons */
+
+.acxiom-button.action.icon.export:not([disabled]):hover {
+  background: url(img/button/acxiom-button-export.png), url(img/button/button-action.png);
+  background-repeat: no-repeat, repeat-x;
+  background-position: 10px 0px, 0 -32px;
+}
+.acxiom-button.action.icon.upload:not([disabled]):hover {
+  background: url(img/button/acxiom-button-upload.png), url(img/button/button-action.png);
+  background-repeat: no-repeat, repeat-x;
+  background-position: 10px 0px, 0 -32px;
+}
+/* arrow */
+
+.acxiom-button.action.arrow.sleft:not([disabled]):hover {
+  /* inherits properties from action button (.acxiom-button.action) */
+  min-width: 35px;
+  background-image: url(img/button/btn-s-arrow-left.png), url(img/button/button-action.png);
+  background-repeat: no-repeat, repeat-x;
+  background-position: center center, 0 -32px;
+}
+.acxiom-button.action.arrow.sright:not([disabled]):hover {
+  /* inherits properties from action button (.acxiom-button.action) */
+  min-width: 35px;
+  background-image: url(img/button/btn-s-arrow-right.png), url(img/button/button-action.png);
+  background-repeat: no-repeat, repeat-x;
+  background-position: center center, 0 -32px;
+}
+/* Double Arrow Button */
+
+.acxiom-button.action.arrow.dleft:not([disabled]):hover {
+  /* inherits properties from action button (.acxiom-button.action) */
+  min-width: 35px;
+  background-image: url(img/button/btn-d-arrow-left.png), url(img/button/button-action.png);
+  background-repeat: no-repeat, repeat-x;
+  background-position: center center, 0 -32px;
+}
+.acxiom-button.action.arrow.dright:not([disabled]):hover {
+  /* inherits properties from action button (.acxiom-button.action) */
+  min-width: 35px;
+  background-image: url(img/button/btn-d-arrow-right.png), url(img/button/button-action.png);
+  background-repeat: no-repeat, repeat-x;
+  background-position: center center, 0 -32px;
+}
+/* clear */
+
+.acxiom-button.clear:not([disabled]):hover {
+  color: #0177ae;
+  border-bottom: 1px solid #c0d4df;
+}
+/* inherits properties from own default state (.acxiom-button.clear) */
+
+/* 
+------------------------------------------ 
+	BUTTONS ACTIVE STATES
+--------------------------------------- */
+
+/* default */
+
+.acxiom-button:not([disabled]):active {
+  text-align: center;
+  background-position: 0 -62px;
+  -webkit-box-shadow: 1px 1px 0 rgba(85, 85, 85, 0.2);
+  -moz-box-shadow: 1px 1px 0 rgba(85, 85, 85, 0.2);
+  box-shadow: 1px 1px 0 rgba(85, 85, 85, 0.2);
+}
+/* action */
+
+.acxiom-button.action:not([disabled]):active {
+  background-position: 0 -32px;
+  border-top-color: #dddddd;
+}
+/* icons */
+
+.acxiom-button.action.icon.export:not([disabled]):active {
+  background: url(img/button/acxiom-button-export.png), url(img/button/button-action.png);
+  background-repeat: no-repeat, repeat-x;
+  background-position: 10px -38px, 0 -32px;
+}
+.acxiom-button.action.icon.upload:not([disabled]):active {
+  background: url(img/button/acxiom-button-upload.png), url(img/button/button-action.png);
+  background-repeat: no-repeat, repeat-x;
+  background-position: 10px -38px, 0 -32px;
+}
+/* clear */
+
+.acxiom-button.clear:not([disabled]):active {
+  color: #034666;
+  border-bottom: 1px solid #cc00dd 2;
+}
+/*
+=============================================================== 
+	TABLE	 											 
+=============================================================== */
+
+/* required parent container */
+
+.acxiom-table {
+  overflow-y: auto !important;
+  overflow-x: hidden;
+  padding: 0;
+  margin: 0;
+  background-color: #E5EBF7;
+}
+.acxiom-table table {
+  font-size: 12px;
+  cellspacing: 0;
+  border: 1px solid #DDDDDD;
+  border-collapse: collapse;
+  width: 100%;
+  height: auto;
+  text-align: left;
+  padding: 0;
+  margin: 0;
+}
+.acxiom-table table td {
+  border: 1px solid #999999;
+  padding: 6px 7px;
+  word-wrap: break-word/* or overflow: hidden */;
+}
+.acxiom-table table tr:first-child td {
+  border-top: none;
+}
+.acxiom-table table th {
+  border: 1px solid #999999;
+  padding: 11px 7px 8px 7px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #444444;
+  vertical-align: bottom;
+  text-align: left;
+  text-transform: uppercase;
+  border-bottom: 1px solid #666666;
+}
+/* hover */
+
+.acxiom-table table tr:hover td {
+  background: #e7eef4;
+}
+/* active row (See acxiom.ui.base.js for JS) */
+
+.acxiom-table table tr.active-row td {
+  background: #899eb1;
+  color: white;
+}
+.acxiom-table table tr.active-row td *[class*='status'] {
+  color: #e4ebf1 !important;
+}
+/* full-width (flush with parent container box edges) */
+
+.acxiom-table .full-width table tr td:first-child,
+.acxiom-table .full-width table tr th:first-child {
+  padding-left: 15px;
+}
+.acxiom-table .full-width table tr td:last-child,
+.acxiom-table .full-width table tr th:last-child {
+  padding-left: 15px;
+}
+/* 
+------------------------------------------ 
+	TABLE WITH SORTING
+--------------------------------------- */
+
+/* *** Must add empty <SPAN> tag inside <TH> *** */
+
+.acxiom-table table thead th span {
+  background: none repeat scroll 0 0 white;
+  border-radius: 2px 2px 0 0;
+  -webkit-border-radius: 2px 2px 0 0;
+  -moz-border-radius: 2px 2px 0 0;
+  display: block;
+  float: left;
+  height: 5px;
+  left: -6px;
+  top: 8px;
+  padding: 0 6px;
+  position: relative;
+  width: 100% !important;
+}
+/* th hover (sorting) only */
+
+.acxiom-table th.sorting:hover,
+.acxiom-table th.sorting_desc:hover,
+.acxiom-table th.sorting_asc:hover {
+  cursor: pointer;
+}
+.acxiom-table th.sorting:hover span {
+  background-color: #e4ebf1;
+}
+/* th asc arrow */
+
+.acxiom-table .sorting_asc {
+  background: url(img/acxiom-table-arrow-up.png) no-repeat right center;
+}
+/* th desc arrow */
+
+.acxiom-table .sorting_desc {
+  background: url(img/acxiom-table-arrow-down.png) no-repeat right center;
+}
+/* sorted column bg */
+
+.acxiom-table tr td.sorting_1 {
+  background-color: #f8f4f5;
+}
+/* sorted column th > span selected state */
+
+.acxiom-table th.sorting_desc span,
+.acxiom-table th.sorting_asc span {
+  background-color: #687884;
+}
+/* 
+------------------------------------------ 
+	Status 
+--------------------------------------- */
+
+.acxiom-table .status-active {
+  font-weight: bold;
+  color: #129953;
+}
+.acxiom-table .status-ended {
+  font-weight: bold;
+  color: #888888;
+}
+.acxiom-table .status-paused {
+  font-weight: bold;
+  color: #dd913a;
+}
+/* 
+------------------------------------------ 
+	Star and checkbox
+--------------------------------------- */
+
+/* JS is required for Stars, see acxiom.ui.base.js) */
+
+.acxiom-table th.star,
+.acxiom-table td.star,
+.acxiom-table th.checkbox,
+.acxiom-table td.checkbox {
+  width: 18px !important;
+  cursor: pointer;
+  padding-right: 10px;
+  padding-left: 10px;
+  background-position: center;
+}
+.acxiom-table thead th.checkbox span:hover {
+  background-position: 0 0;
+}
+.acxiom-table thead th.checkbox span {
+  background-color: transparent !important;
+}
+.acxiom-table thead th.checkbox {
+  background: none !important;
+}
+.acxiom-table tbody td.star div {
+  font-size: 0;
+  line-height: 0;
+}
+.acxiom-table .star-icon {
+  background: url("img/acxiom-table-star-empty.png") no-repeat;
+  height: 18px;
+  width: 18px;
+}
+.acxiom-table .star-icon.star-active {
+  background: url("img/acxiom-table-star-full.png") no-repeat;
+  height: 18px;
+  width: 18px;
+}
+/* 
+------------------------------------------ 
+	input ovverrides 
+--------------------------------------- */
+
+.acxiom-table acxiom-input {
+  height: 18px;
+}
+.acxiom-table acxiom-select {
+  min-height: 30px;
+  height: 30px;
+}
+table label.acxiom-single-checkbox {
+  padding: 0;
+}
+/* to counter TH > span used for hover state */
+
+.acxiom-table table thead th label.acxiom-single-checkbox  span {
+  background: transparent;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  display: inline-block;
+  float: none;
+  height: auto;
+  width: auto;
+  left: 0;
+  top: 0;
+  padding: 0 0 6px 0;
+  position: static;
+}
+/*
+=============================================================== 
+	Pagination											 
+=============================================================== */
+
+.acxiom-pagination {
+  min-width: 125px;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: right !important;
+  height: 24px;
+  line-height: 24px;
+  margin: 0;
+  padding: 0;
+}
+.acxiom-pagination input {
+  margin: 0 5px;
+  width: 15px;
+  float: left;
+  margin-right: 5px;
+}
+.acxiom-pagination a {
+  float: left;
+  height: 24px;
+  line-height: 24px;
+  display: block;
+  width: 13px;
+}
+.acxiom-pagination a.first {
+  background: url('../styles/img/pagination/G_EL1.png') center center no-repeat;
+}
+.acxiom-pagination a.previous {
+  background: url('../styles/img/pagination/G_EL2.png') center center no-repeat;
+  margin-right: 3px;
+}
+.acxiom-pagination a.next {
+  background: url('../styles/img/pagination/G_ER3.png') center center no-repeat;
+}
+.acxiom-pagination a.last {
+  background: url('../styles/img/pagination/G_ER4.png') center center no-repeat;
+}
+.acxiom-pagination .totalpages {
+  margin-right: 3px;
+  width: auto;
+  float: left;
+}
+.acxiom-pagination a.disabled {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  filter: alpha(opacity=50);
+  -moz-opacity: 0.5;
+  -khtml-opacity: 0.5;
+  opacity: 0.5;
+}
+/*
+=============================================================== 
+	Signposting											 
+=============================================================== */
+
+.acxiom-signposting {
+  overflow: hidden;
+}
+.acxiom-signposting .step {
+  text-align: center;
+  float: left;
+}
+.acxiom-signposting .step,
+.acxiom-signposting .step * {
+  cursor: pointer !important;
+}
+.acxiom-signposting .number {
+  color: white;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  background-color: #aabecd;
+  height: 20px;
+  width: 20px;
+  line-height: 20px;
+  margin: 0 auto;
+}
+.acxiom-signposting .step label {
+  text-transform: uppercase;
+}
+.acxiom-signposting .step:hover .number {
+  background: #8098ad;
+}
+.acxiom-signposting .step:hover label {
+  color: #8098ad;
+}
+.acxiom-signposting .step.selected .number {
+  background: #687884;
+}
+.acxiom-signposting .step.selected label {
+  color: #687884;
+}
+/*
+=============================================================== 
+	Breadcrumbs											 
+=============================================================== */
+
+.acxiom-breadcrumb-container a:link,
+.acxiom-breadcrumb-container a:active,
+.acxiom-breadcrumb-container a:visited {
+  color: #0177ae !important;
+}
+.acxiom-breadcrumb-container a:hover {
+  text-decoration: underline;
+}
+.acxiom-breadcrumb-container span {
+  color: #666666;
+}
+/*
+=============================================================== 
+	TABS											 
+=============================================================== */
+
+/* ------- LessMixins -------  */
+
+.tabbar {
+  margin: 0px;
+  padding: 0px;
+}
+.tabbar-li {
+  color: #898989;
+  font-size: 11px;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 15px;
+  list-style-type: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.tabbar-active {
+  background-color: white;
+  color: #333333;
+  font-weight: bold;
+  cursor: pointer;
+  border: 1px solid #dbdbdb !important;
+  border-top-left-radius: 4px;
+  -webkit-border-top-left-radius: 4px;
+  -moz-border-top-left-radius: 4px;
+}
+/* 
+------------------------------------------ 
+	Common to both 
+--------------------------------------- */
+
+.acxiom-tabs {
+  display: block;
+}
+.acxiom-tabs ul:first-child  div:hover {
+  cursor: pointer;
+  margin-left: -1px;
+}
+.acxiom-tabs-container {
+  overflow: hidden;
+}
+.acxiom-inner-tab-container {
+  display: none;
+}
+.acxiom-tabs .acxiom-tabs-container .acxiom-inner-tab-container {
+  padding-top: 15px;
+}
+/* 
+------------------------------------------ 
+	Horizontal
+--------------------------------------- */
+
+.acxiom-tabs.horizontal ul:first-child {
+  margin: 0px;
+  padding: 0px;
+  padding: 15px 20px;
+}
+.acxiom-tabs.horizontal ul:first-child  li {
+  color: #898989;
+  font-size: 11px;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 15px;
+  list-style-type: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: inline;
+}
+.acxiom-tabs.horizontal ul:first-child  li.active {
+  background-color: white;
+  color: #333333;
+  font-weight: bold;
+  cursor: pointer;
+  border: 1px solid #dbdbdb !important;
+  border-top-left-radius: 4px;
+  -webkit-border-top-left-radius: 4px;
+  -moz-border-top-left-radius: 4px;
+  border-bottom: 2px solid white;
+  border-top-right-radius: 4px;
+  -webkit-border-top-right-radius: 4px;
+  -moz-border-top-right-radius: 4px;
+}
+.acxiom-tabs.horizontal .acxiom-tabs-container .active {
+  display: block;
+}
+.acxiom-tabs.horizontal .acxiom-tabs-container {
+  border-top: 1px solid #dbdbdb !important;
+}
+/* 
+------------------------------------------ 
+	Vertical 
+--------------------------------------- */
+
+.acxiom-tabs.vertical ul:first-child {
+  margin: 0px;
+  padding: 0px;
+  float: left;
+  width: 20%;
+}
+.acxiom-tabs.vertical ul:first-child  li {
+  color: #898989;
+  font-size: 11px;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 15px;
+  list-style-type: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: block;
+}
+.acxiom-tabs.vertical ul:first-child  li.active {
+  background-color: white;
+  color: #333333;
+  font-weight: bold;
+  cursor: pointer;
+  border: 1px solid #dbdbdb !important;
+  border-top-left-radius: 4px;
+  -webkit-border-top-left-radius: 4px;
+  -moz-border-top-left-radius: 4px;
+  position: relative;
+  left: 1px;
+  border-right-color: white;
+  border-bottom-left-radius: 4px;
+  -webkit-border--bottom-left-radius: 4px;
+  -moz-border--bottom-left-radius: 4px;
+}
+.acxiom-tabs.vertical .acxiom-inner-tab-container.active {
+  display: block;
+}
+.acxiom-tabs.vertical .acxiom-tabs-container {
+  border-left: 1px solid #dbdbdb !important;
+  min-height: 230px;
+  float: left;
+  width: 79.7%;
+}
+/* 
+------------------------------------------ 
+	TABS - Utility class overrides 
+--------------------------------------- */
+
+.acxiom-tabs.filled {
+  background: transparent !important;
+}
+.acxiom-tabs.filled ul:first-child li.active {
+  background: #faf8f9 !important;
+}
+.acxiom-tabs.horizontal.filled ul:first-child li.active {
+  border-bottom-color: #faf8f9 !important;
+}
+.acxiom-tabs.vertical.filled ul:first-child li.active {
+  border-right-color: #faf8f9 !important;
+}
+/*
+=============================================================== 
+	TOP NAVIGATION											 
+=============================================================== */
+
+/* ------- LessMixins -------  */
+
+.menu-style {
+  color: white;
+  font-size: 12px;
+  text-align: center;
+  height: 100%;
+  line-height: 45px;
+}
+.item-highlight {
+  width: 100%;
+  height: 6px;
+  border-radius: 2px 2px 0 0;
+  -webkit-border-radius: 2px 2px 0 0;
+  -moz-border-radius: 2px 2px 0 0;
+  display: block;
+  position: relative;
+  bottom: 5px;
+}
+.submenu-shadow {
+  -webkit-box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.3);
+}
+.submenu-corners {
+  border-bottom-left-radius: 2px;
+  -webkit-border-bottom-left-radius: 2px;
+  -moz-border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  -webkit-border-bottom-right-radius: 2px;
+  -moz-border-bottom-right-radius: 2px;
+}
+/* ----- End LessMixins -----  */
+
+/* 
+------------------------------------------ 
+	TOP NAV LEVEL 1
+--------------------------------------- */
+
+.acxiom-topnav-main {
+  width: 100%;
+  overflow: hidden;
+  background-color: #b96d33;
+  height: 43px;
+  display: block;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border-top-left-radius: 4px;
+  -webkit-border-top-left-radius: 4px;
+  -moz-border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  -webkit-top-bottom-right-radius: 4px;
+  -moz-border-top-right-radius: 4px;
+}
+.acxiom-topnav-logo {
+  float: left;
+  padding-left: 20px;
+  padding-top: 3px;
+}
+.acxiom-topnav-logo label {
+  font-size: 20px;
+  color: white;
+  top: 6px;
+  position: relative;
+  left: 15px;
+  text-transform: uppercase;
+  display: inline;
+}
+.acxiom-topnav-logo img {
+  float: left;
+  /*padding-top:5px; PATCH jriewe: 04/21/2013 updating to support new logo*/
+
+}
+.acxiom-topnav-tabs {
+  float: left;
+  padding-left: 70px;
+}
+.acxiom-topnav-tabs div {
+  color: white;
+  font-size: 12px;
+  text-align: center;
+  height: 100%;
+  line-height: 45px;
+  float: left;
+  padding-right: 16px;
+  padding-left: 16px;
+  text-align: middle;
+}
+.acxiom-topnav-tabs div:hover,
+.acxiom-topnav-tabs ul li:hover {
+  background-color: #ce9971;
+  color: #39454d;
+  cursor: pointer;
+}
+.acxiom-topnav-tabs ul li:hover a {
+  color: #39454d;
+}
+.acxiom-topnav-tabs div.active,
+.acxiom-topnav-tabs ul li.active > a,
+.acxiom-topnav-tabs div.active:hover,
+.acxiom-topnav-tabs ul li.active:hover > a {
+  background-color: #d8b497;
+  color: #39454d;
+  cursor: default;
+}
+.acxiom-topnav-search {
+  float: right;
+  padding-right: 15px;
+  padding-top: 9px;
+}
+.acxiom-topnav-search input {
+  background-image: url("img/acxiom-input-search.png");
+  background-repeat: no-repeat;
+  background-position: left;
+  padding-left: 18px;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  color: #333333;
+  border: 1px solid transparent;
+  font-size: 12px;
+  width: 150px;
+  height: 20px;
+  background-color: #d8b497;
+}
+/* 
+------------------------------------------ 
+	TOP NAV LEVEL 2
+--------------------------------------- */
+
+.acxiom-subnav-logo-div {
+  float: left;
+  padding-left: 15px;
+}
+.acxiom-subnav-div {
+  display: none;
+}
+.acxiom-subnav-div:hover,
+.acxiom-subtabs-container .active {
+  display: block;
+}
+.acxiom-subtabs-container {
+  display: block;
+  height: 32px;
+  overflow: hidden;
+  background: white;
+  border-bottom: 1px solid #dbdbdb !important;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.acxiom-subnavSec-tabs-div ul li {
+  background: white;
+  text-align: center;
+  display: inline;
+  padding-bottom: 5px;
+  cursor: pointer;
+  font-size: 13px;
+  color: #465c6a;
+  height: 20px;
+  padding: 0 2px 10px;
+}
+.acxiom-subnavSec-tabs-div li:hover span,
+.acxiom-nav-dropdown li:hover span {
+  width: 100%;
+  height: 6px;
+  border-radius: 2px 2px 0 0;
+  -webkit-border-radius: 2px 2px 0 0;
+  -moz-border-radius: 2px 2px 0 0;
+  display: block;
+  position: relative;
+  bottom: 5px;
+  background: #e4ebf1;
+}
+.acxiom-subnavSec-tabs-div .active span,
+.acxiom-nav-dropdown .active span {
+  width: 100%;
+  height: 6px;
+  border-radius: 2px 2px 0 0;
+  -webkit-border-radius: 2px 2px 0 0;
+  -moz-border-radius: 2px 2px 0 0;
+  display: block;
+  position: relative;
+  bottom: 5px;
+  background: #687884;
+}
+.acxiom-subnav-logo-div img {
+  float: left;
+  padding-top: 12px;
+}
+.acxiom-tabsSec-widget {
+  border: 0;
+}
+.acxiom-subnavSec-tabs-div {
+  text-align: center;
+  background: white;
+}
+.acxiom-subnavSec-tabs-div ul {
+  margin: 0 0 -5px;
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+}
+.acxiom-subnavSec-tabs-div li {
+  float: left;
+  list-style: none;
+}
+.acxiom-subnavSec-tabs-div li a {
+  color: #465c6a;
+  text-decoration: none;
+  display: block;
+  font-size: 13px;
+  padding: 9px 15px 7px 14px;
+}
+/* 
+------------------------------------------ 
+	TOP NAV LEVEL 2 + Dropmenu
+--------------------------------------- */
+
+.acxiom-menu-div div {
+  display: none;
+}
+.acxiom-menu-div div:hover,
+.acxiom-menu-div .active {
+  display: block;
+  padding-top: 10px;
+}
+.acxiom-menu-div {
+  overflow: hidden;
+}
+.acxiom-subnav-div:hover {
+  display: block;
+}
+.acxiom-nav-dropdown li {
+  float: left;
+  list-style: none;
+}
+.acxiom-nav-dropdown li a {
+  color: #465c6a;
+  text-decoration: none;
+  display: block;
+  font-size: 13px;
+  padding: 9px 15px 7px 14px;
+}
+.acxiom-nav-dropdown li ul li {
+  margin: 0px;
+  text-align: left;
+  padding: 0 !important;
+  height: auto;
+}
+.acxiom-nav-dropdown li ul li a {
+  height: auto;
+}
+.acxiom-nav-dropdown li ul {
+  display: none;
+  background-color: white;
+  overflow: hidden;
+  z-index: 1;
+  border: 1px solid #dbdbdb !important;
+  -webkit-box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.3);
+  border-bottom-left-radius: 2px;
+  -webkit-border-bottom-left-radius: 2px;
+  -moz-border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  -webkit-border-bottom-right-radius: 2px;
+  -moz-border-bottom-right-radius: 2px;
+}
+.acxiom-nav-dropdown li:hover ul {
+  display: block;
+  position: absolute;
+  margin: 1px 0 0 0;
+  padding: 0;
+}
+.acxiom-nav-dropdown li:hover ul li {
+  float: none;
+  border: 0px;
+}
+.acxiom-nav-dropdown li:hover li a {
+  color: #465c6a;
+  text-decoration: none;
+  height: auto;
+  padding: 7px 15px 8px 14px;
+}
+.acxiom-nav-dropdown li li a:hover {
+  background-color: #e4ebf1;
+}
+/*
+=============================================================== 
+	SCROLLBARS	 											 
+=============================================================== */
+
+/* gmail style scrollbar for webkit only */
+
+::-webkit-scrollbar-thumb {
+  border-width: 1px 1px 1px 2px;
+}
+::-webkit-scrollbar-track {
+  border-width: 0;
+}
+::-webkit-scrollbar {
+  height: 16px;
+  overflow: visible;
+  width: 16px;
+}
+::-webkit-scrollbar:disabled {
+  background: #f6f6f7;
+}
+::-webkit-scrollbar-button {
+  height: 0;
+  width: 0;
+}
+::-webkit-scrollbar-track {
+  background-clip: padding-box;
+  border: solid transparent;
+  border-width: 0 0 0 4px;
+}
+::-webkit-scrollbar-track:horizontal {
+  border-width: 4px 0 0;
+}
+::-webkit-scrollbar-track:hover {
+  background-color: rgba(100, 100, 100, 0.05);
+  box-shadow: inset 1px 0 0 rgba(100, 100, 100, 0.1);
+}
+::-webkit-scrollbar-track:horizontal:hover {
+  box-shadow: inset 0 1px 0 rgba(100, 100, 100, 0.1);
+}
+::-webkit-scrollbar-track:active {
+  background-color: rgba(100, 100, 100, 0.05);
+  box-shadow: inset 1px 0 0 rgba(100, 100, 100, 0.14), inset -1px 0 0 rgba(100, 100, 100, 0.07);
+}
+::-webkit-scrollbar-track:horizontal:active {
+  box-shadow: inset 0 1px 0 rgba(100, 100, 100, 0.14), inset 0 -1px 0 rgba(100, 100, 100, 0.07);
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgba(100, 100, 100, 0.2);
+  background-clip: padding-box;
+  border: solid transparent;
+  border-width: 1px 1px 1px 6px;
+  min-height: 28px;
+  padding: 100px 0 0;
+  box-shadow: inset 1px 1px 0 rgba(100, 100, 100, 0.1), inset 0 -1px 0 rgba(100, 100, 100, 0.07);
+}
+::-webkit-scrollbar-thumb:horizontal {
+  border-width: 6px 1px 1px;
+  padding: 0 0 0 100px;
+  box-shadow: inset 1px 1px 0 rgba(100, 100, 100, 0.1), inset -1px 0 0 rgba(100, 100, 100, 0.07);
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(100, 100, 100, 0.4);
+  box-shadow: inset 1px 1px 1px rgba(100, 100, 100, 0.25);
+}
+::-webkit-scrollbar-thumb:active {
+  background-color: rgba(100, 100, 100, 0.5);
+  box-shadow: inset 1px 1px 3px rgba(100, 100, 100, 0.35);
+}
+::-webkit-scrollbar-track:hover {
+  background-color: rgba(100, 100, 100, 0.035);
+  box-shadow: inset 1px 1px 0 rgba(100, 100, 100, 0.14), inset -1px -1px 0 rgba(100, 100, 100, 0.07);
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+/* body */
+
+body::-webkit-scrollbar-track-piece {
+  background-clip: padding-box;
+  background-color: #d8b497;
+  border: solid white;
+  border-width: 0;
+  box-shadow: inset 1px 0 0 rgba(100, 100, 100, 0.14), inset -1px 0 0 rgba(100, 100, 100, 0.25);
+}
+body::-webkit-scrollbar-track-piece:horizontal {
+  border-width: 0;
+  box-shadow: inset 0 1px 0 rgba(100, 100, 100, 0.14), inset 0 -1px 0 rgba(100, 100, 100, 0.07);
+}
+body::-webkit-scrollbar-thumb,
+body::-webkit-scrollbar-thumb:horizontal {
+  border-width: 1px;
+  background-color: rgba(80, 80, 80, 0.4);
+}
+body::-webkit-scrollbar-thumb:hover,
+body::-webkit-scrollbar-thumb:active {
+  background-color: rgba(80, 80, 80, 0.85);
+  box-shadow: inset 1px 1px 3px rgba(80, 80, 80, 0.55);
+}
+/* Global Nav bar */
+
+.acxiom-nav-container .main-list::-webkit-scrollbar-track-piece,
+.acxiom-nav-container .main-list::-webkit-scrollbar-track {
+  background-color: white !important;
+}

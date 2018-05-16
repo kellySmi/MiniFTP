@@ -1,0 +1,80 @@
+/*@import url("grey.less");*/
+/* @import url("lavender.less"); */
+/* @import url("blue.less"); */
+/* @import url("sage.less"); */
+ @import url("rust.less"); 
+/*@import url("teal.less"); */
+
+@primary-color: @primary-color-var;
+@secondary-color: @secondary-color-var;
+@tertiary-color: @tertiary-color-var;
+@quaternary-color: @quaternary-color-var;
+
+.gradient (@origin: top, @start: @tertiary-color, @stop: @gradient-end-var) {
+    background-color: @start;
+    background-image: -webkit-linear-gradient(@origin, @start, @stop);
+    background-image: -moz-linear-gradient(@origin, @start, @stop);
+    background-image: -o-linear-gradient(@origin, @start, @stop);
+    background-image: -ms-linear-gradient(@origin, @start, @stop);
+    background-image: linear-gradient(@origin, @start, @stop);
+}
+
+/* default settings */
+@max-width: 1200px;
+@min-width: 970px;
+.checkbox-radio-img{
+	background-position: 0px @checkbox-radio-var;
+}
+
+/* font */
+@font-color: #666666;
+@font-size: 13px;
+@font-face{
+	font-family: 'acxiom-Helvetica';
+	src: url('font/helveticaneuece55roman.eot') format('eot'),
+		 url('font/helveticaneuece55roman.eot?#iefix') format('embedded-opentype'),
+		 url('font/helveticaneuece55roman.woff') format('woff'),
+		 url('font/helveticaneuece55roman.ttf') format('truetype'),
+		 url('font/helveticaneuece55roman.svg#helveticaneuece55roman') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@input-font-color: #333;
+.status-font {font-weight: bold;}
+
+/* colors */
+@link-color: #0177ae;
+@selected-color: #687884;
+@table-selected-color: #899EB1;
+@highlight-color: #e4ebf1;
+@border-color: #DBDBDB !important;
+@fill-color: #faf8f9;
+@status-active-color: #129953;
+@status-ended-color: #888;
+@status-inactive-color: #DD913A;
+@color-hr: #9E9E9E;
+
+/* utility */
+@elem-padding: 15px;			
+@elem-margin: 15px;
+@border-width: 1px;
+@border-style: solid;
+
+.rounded-corners (@radius: 2px) {
+	border-radius: 			@radius;
+	-webkit-border-radius: 	@radius;
+	-moz-border-radius: 	@radius;
+}
+.box-shadow (@string: 0 1px 0 rgba(155, 155, 155, 0.3) inset) {
+	-webkit-box-shadow: @string;
+	-moz-box-shadow:    @string;
+	box-shadow:         @string;
+}
+.no-selection {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}

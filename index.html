@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Data Transformation Export</title>
+	
+	<link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/acxiom.base.css">
+	<link rel="stylesheet" type="text/css" href="./css/jquery-ui.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/jquery-ui.structure.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/jquery-ui.theme.css">
+	<link rel="stylesheet" type="text/css" href="./css/styles.css">
+	
+</head>
+
+<body>
+
+	<div id="mainView" class="row-fluid">
+	<br>
+	  <div class="acxiom-action-container dark">
+	    <h3 style="color: #DDDDDD;">Settings to use for DT export</h3>
+	  </div>
+		<br>
+		<p class="hpad"> 
+		    Export a datamart using the FTP server address and randomly generated credentials in the table below.
+	    </p> 
+		<p class="hpad">
+            <div class="hpad" id="locationDiv">		
+		        Default Download Location: <span id="location">No location specified.</span>
+			</div>
+			<input type="file" id="browser" style="display:none;" nwdirectory />
+	        <input type='button' id='browseButton' class='acxiom-button action hpad' value='Browse'>
+		</p> 
+	    <div id="credentials" class="hpad">
+            <div class="acxiom-table">
+                <table>
+                    <thead style="background: #f0f0f0">
+                       <tr>
+                           <th>Field</th>
+                           <th>Value</th>
+                           <th>Copy to Clipboard</th>
+                       </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Server Address</td>
+		            		<td><span id="srvrAdd"></span></td>
+		            		<td><input type='button' class='copy acxiom-button action' value='Copy' data-id='host'></td>
+                        </tr>
+                        <tr>
+                            <td>Username</td>
+		            		<td><span id="uname"></span></td>
+	            			<td><input type='button' class='copy acxiom-button action' value='Copy' data-id='acctUsername'></td>
+                        </tr>
+	            		<tr>
+                            <td>Password</td>
+	            			<td><span id="pass"></span></td>
+		            		<td><input type='button' class='copy acxiom-button action' value='Copy' data-id='acctPassword'></td>
+                        </tr>
+                    </tbody>
+                 </table>
+            </div>	
+	    </div>
+		
+	    <br>
+		
+	    <center>
+	    	<div id="statusSection">
+		    	<p id="status"></p>
+		    	<div id="progressbar"></div>
+	    	</div>
+	    </center>
+		
+		<input type='button' id='closeButton' class='acxiom-button secondary hpad' value='Close' onClick="window.close();">
+	
+		<div id="dialog-confirm" title="File Received" style="display: none;">
+			<h5 class="inline-header">Name: </h5><span id="fileNameField"></span><br>
+			<h5 class="inline-header">Size: </h5><span id="fileSizeField"></span><br>
+			<h5 class="inline-header">Duration: </h5><span id="durationField"></span><br>
+		</div>
+	
+	    <script type="text/javascript" src="./js/jquery.min.js"></script>
+	    <script type="text/javascript" src="./js/jquery-ui.min.js"></script>
+	    <script type="text/javascript" src="./js/script.js"></script>
+	
+	</div>
+	
+</body>
+</html>
